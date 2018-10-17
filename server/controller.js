@@ -29,6 +29,7 @@ delete: (req, res) => {
                     // we typically use req.query in delete and update requests. 
                     // BC there is 
   const { name } = req.query;
+  console.log(req)
   Todo.deleteOne({ name }, (err, deleted) => {
     if (err) {
       console.log(err);
